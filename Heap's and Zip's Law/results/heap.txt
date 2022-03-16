@@ -1,0 +1,2 @@
+Parametres de Heap:
+k = 6, Beta = 0

@@ -1,0 +1,22 @@
+ExtractData.py --index arxiv --minfreq 0.7 --maxfreq 0.9 --numwords 200
+MRK MEANS: 
+Iteration 1 ...
+Time= 3.355052 seconds
+Iteration 2 ...
+Time= 2.772255 seconds
+Algorithm converged
+PROCESS RESULTS: 
+CLASS0
+[(1.0, 'which'), (1.0, 'use'), (1.0, 'from')]
+CLASS1
+[(1.0, 'which'), (1.0, 'use')]
+CLASS12
+[(1.0, 'which'), (1.0, 'from')]
+CLASS17
+[(1.0, 'which')]
+CLASS2
+[(1.0, 'use'), (1.0, 'from')]
+CLASS4
+[(1.0, 'from')]
+CLASS8
+[(1.0, 'use')]

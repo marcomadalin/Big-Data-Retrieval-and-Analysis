@@ -1,0 +1,70 @@
+2.1:
+ID= JXperHwBANrdQdyseoUD SCORE=15.548158
+PATH= ./files/20_newsgroups/alt.atheism/0000290
+TEXT: Your posting provoked me into checking my save fil
+-----------------------------------------------------------------
+ID= y3perHwBANrdQdyseoUH SCORE=14.904823
+PATH= ./files/20_newsgroups/alt.atheism/0000456
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 0nperHwBANrdQdyseoUH SCORE=14.314389
+PATH= ./files/20_newsgroups/alt.atheism/0000463
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 4XperHwBANrdQdysrL_p SCORE=10.113195
+PATH= ./files/20_newsgroups/soc.religion.christian/0015544
+TEXT: kwfinken@pooh.harpo.uccs.edu (Kevin W. Finkenbinde
+-----------------------------------------------------------------
+ID= 1nperHwBANrdQdysf4fk SCORE=8.572511
+PATH= ./files/20_newsgroups/alt.atheism/0000985
+TEXT: BR> From: wpr@atlanta.dg.com (Bill Rawlins)
+BR> Ne
+-----------------------------------------------------------------
+9 Documents
+##################################################################
+2.2:
+ID= JXperHwBANrdQdyseoUD SCORE=19.527384
+PATH= ./files/20_newsgroups/alt.atheism/0000290
+TEXT: Your posting provoked me into checking my save fil
+-----------------------------------------------------------------
+ID= y3perHwBANrdQdyseoUH SCORE=18.664692
+PATH= ./files/20_newsgroups/alt.atheism/0000456
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 0nperHwBANrdQdyseoUH SCORE=17.877821
+PATH= ./files/20_newsgroups/alt.atheism/0000463
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 4XperHwBANrdQdysrL_p SCORE=16.076458
+PATH= ./files/20_newsgroups/soc.religion.christian/0015544
+TEXT: kwfinken@pooh.harpo.uccs.edu (Kevin W. Finkenbinde
+-----------------------------------------------------------------
+ID= 1nperHwBANrdQdysf4fk SCORE=15.0517645
+PATH= ./files/20_newsgroups/alt.atheism/0000985
+TEXT: BR> From: wpr@atlanta.dg.com (Bill Rawlins)
+BR> Ne
+-----------------------------------------------------------------
+9 Documents
+##################################################################
+2.3:
+ID= JXperHwBANrdQdyseoUD SCORE=27.117088
+PATH= ./files/20_newsgroups/alt.atheism/0000290
+TEXT: Your posting provoked me into checking my save fil
+-----------------------------------------------------------------
+ID= y3perHwBANrdQdyseoUH SCORE=26.04978
+PATH= ./files/20_newsgroups/alt.atheism/0000456
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 0nperHwBANrdQdyseoUH SCORE=25.065346
+PATH= ./files/20_newsgroups/alt.atheism/0000463
+TEXT: In article <1ql0d3$5vo@dr-pepper.East.Sun.COM> geo
+-----------------------------------------------------------------
+ID= 4XperHwBANrdQdysrL_p SCORE=14.263127
+PATH= ./files/20_newsgroups/soc.religion.christian/0015544
+TEXT: kwfinken@pooh.harpo.uccs.edu (Kevin W. Finkenbinde
+-----------------------------------------------------------------
+ID= 83perHwBANrdQdysrL7n SCORE=13.975613
+PATH= ./files/20_newsgroups/soc.religion.christian/0015305
+TEXT: In article <Apr.23.02.56.33.1993.3165@geneva.rutge
+-----------------------------------------------------------------
+9 Documents

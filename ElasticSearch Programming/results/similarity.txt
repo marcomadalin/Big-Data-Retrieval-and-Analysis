@@ -1,0 +1,17 @@
+allNovels = 0.02363
+onlyDickensNovels = 0.02309
+math = 0.03491
+religion = 0.02315
+mixed = 0.05162
+1mathvs1novel = 0.02133
+1mathvs1religion =  0.00236
+1religionvs1novel = 0.10495
+
+# Sorprende que la comparacion entre novelas de Dickens sea igual de pequeña
+que la de todas las novelas juntas.
+# También sorprende que la cimilitud entre textos mezclasdos sea mayor que la
+de textos del mismo tema
+# Es claro que la maxima diferencia que encontramos es entre 1 texto de mates y
+uno de religion. Puede ser porque son temas muy dispares y textos no muy largos.
+#Sorprende la similitud entre un texto religioso y una novela en comparacion con
+los demas resultados.

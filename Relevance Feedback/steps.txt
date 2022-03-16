@@ -1,0 +1,44 @@
+1- python3 IndexFilesPreprocess.py --index 20groups --path ./files/20_newsgroups --token letter --filter lowercase asciifolding
+  1.1- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query toronto nyc
+  1.2- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query toronto^2 nyc
+  1.3- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query toronto nyc^2
+2-
+  2.1- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query jesus nazareth
+  2.2- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query jesus^2 nazareth
+  2.3- python3 SearchIndexWeights.py --index 20groups --nhits 5 --query jesus nazareth^2
+
+3-VAMOS A MIRAR COMO AFECTA CADA RONDA CON DIFERENTES PARAMETROS A LOS PESOS DE LOS TERMINOS
+EN LA QUERY SI MANTENEMOS R=2 LO QUE PROVOCA QUE NO SE AÑADAN NUEVOS TERMINOS:
+ 3.1 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 1 --B 1 --query toronto nyc
+ 3.2 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 2 --B 1 --query toronto nyc
+ 3.3 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 1 --B 2 --query toronto nyc > ./results/3.3
+ 3.4 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 3 --B 2 --query toronto nyc > ./results/3.4
+ 3.5 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 4 --B 1 --query toronto nyc > ./results/3.5
+ 3.6 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 10 --B 1 --query toronto nyc > ./results/3.6
+ 3.7 python3 rocchio.py --index 20groups --k 10 --R 2 --nrounds 10 --A 1 --B 10 --query toronto nyc > ./results/3.7
+ # Vemos que a alpha mayor, mayor es la importancia (exponente) que se le da a cada termino en la nueva query
+ # También podemos observar que a partir de la ronda 3 los cambios son bastante poco significativos
+
+
+ 4-VAMOS A VER QUE PASA CON R I EL NUMERO DE DOCUMENTOS OBTENIDO:
+  4.1 python3 rocchio.py --index 20groups --k 10 --R 1  --nrounds 10 --A 2 --B 1 --query toronto > ./results/4.1
+  4.2 python3 rocchio.py --index 20groups --k 10 --R 2  --nrounds 10 --A 2 --B 1 --query toronto > ./results/4.2
+  4.3 python3 rocchio.py --index 20groups --k 10 --R 3  --nrounds 10 --A 2 --B 1 --query toronto > ./results/4.3
+  4.4 python3 rocchio.py --index 20groups --k 10 --R 4  --nrounds 10 --A 2 --B 1 --query toronto > ./results/4.4
+  #Conforme vamos cambiando aumentando la R se disminuye el numero de documentos obtenido. Esto es porque hay mas elementos
+  en la query, por lo tanto sera mas dificil que esten todos los terminos en un mismo documento.
+  +R -> +precision -> -recall
+
+  5-VAMOS A VER QUE PASA VARIANDO K
+   5.1 python3 rocchio.py --index 20groups --k 20 --R 1  --nrounds 10 --A 2 --B 1 --query toronto > ./results/5.1
+   5.2 python3 rocchio.py --index 20groups --k 200 --R 1  --nrounds 10 --A 2 --B 1 --query toronto > ./results/5.2
+   5.3 python3 rocchio.py --index 20groups --k 500 --R 1  --nrounds 10 --A 2 --B 1 --query toronto > ./results/5.3
+   5.4 python3 rocchio.py --index 20groups --k 800 --R 1  --nrounds 10 --A 2 --B 1 --query toronto > ./results/5.4
+   #Incrementando k obtenemos +documentos por lo tanto +recall. En este caso es posible que para k muy altas se
+   añadan muchos falsos positivos i por lo tanto perdamos mucha precision.
+
+   6-EN EL CASO DE EL NUMERO NROUND A PARTIR DE LA RONDA 3 YA Rocchio HACEW BASTANTE POQUITO. POR NO DECIR QUE LA QUERY
+   SE QUEEDA PRACTICAMENTE IGUAL.
+    6.1 python3 rocchio.py --index 20groups --k 20 --R 5  --nrounds 10 --A 2 --B 1 --query toronto > ./results/6.1
+    6.2 python3 rocchio.py --index 20groups --k 20 --R 5  --nrounds 5 --A 2 --B 1 --query toronto > ./results/6.2
+    6.3 python3 rocchio.py --index 20groups --k 20 --R 5  --nrounds 2 --A 2 --B 1 --query toronto > ./results/6.3

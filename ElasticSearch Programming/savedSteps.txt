@@ -1,0 +1,38 @@
+1. python3 IndexFilesPreprocess.py --index newsnovels --path ./novels --token letter --filter lowercase asciifolding
+	#probamos letter :bastant bé, no hi ha molta cosa rara
+2. python3 IndexFilesPreprocess.py --index newsnovels2 --path ./novels --token whitespace --filter lowercase asciifolding
+	#provem whitespace :radical, separa les paraules per espais en blanc, deixa punts i parentesis
+3. python3 IndexFilesPreprocess.py --index newsnovels4 --path ./novels --token classic --filter lowercase asciifolding
+	#provem classic: se come fechas y .zip
+4. python3 IndexFilesPreprocess.py --index newsnovels3 --path ./novels --token standard --filter lowercase asciifolding
+	#provem standard: se come los numeros y los barrabaja
+5. python3 IndexFilesPreprocess.py --index newsnovels5 --path ./novels --token letter  --filter lowercase asciifolding stop
+	#provem letter que es el que millor anaba i el fiquem amb la opcio stop, que treu les stopwords (“a”, “the”, “is”, “are”...):
+	sorpren veure que hi ha molts subjectes que no els elimina tot i que hi ha webs que els posen com stopwords, aixo va dir el
+	profe que es a causa de les stopwords wue te registrades elasticsearch. (he utilitzat aquestes opcions per a tota la practica)
+6. python3 IndexFilesPreprocess.py --index docs1 --path ./docs --token letter  --filter lowercase asciifolding stop
+	#index per a la prova de similarity amb el joc de prova de les diapos de teoria
+7. python3 TFIDFViewer.py --index newsnovels5 --files ./docs/3 ./docs/4 > proveSim.txt
+	#joc de prova que surt  exacte
+8. python3 TFIDFViewer.py --index newsnovels5 --files ./novels/DarwinOriginofSpecies.txt ./novels/DickensAChristmasCarol.txt --print > DickensSimilarity.txt
+	#proba de similitud entre dos noveles aleatories (per provar)
+9. python3  TFplot.py --index newsnovels5
+	#similitud entre totes les noveles
+10. python3  TFplot.py --index newsnovels5 (Dickens)
+	#similitud entre novles de dickens
+
+11. python3 IndexFilesPreprocess.py --index maths --path ./math --token letter  --filter lowercase asciifolding stop
+12. python3 TFplots.py --index maths
+	#similitud entre textos de mates
+
+13. python3 IndexFilesPreprocess.py --index religion --path ./religion --token letter  --filter lowercase asciifolding stop
+14. python3 TFplots.py --index religion
+	#similitud entre textos religiosos
+
+15.  python3 IndexFilesPreprocess.py --index mixed --path ./mixed --token letter  --filter lowercase asciifolding stop
+16. python3 TFplots.py --index mixed
+	#similitud entre un mix de tots els textos
+
+	EL RESULTAT DE LES ULTIMES PROVES DE SIMILITUD ESTA A SIMILARITY.TXT Y A SIMPLOT.PNG
+	TAMBE SE HA DE EXPLICAR QUE A L'EXXERCICI DE COMPLETAR CODI HE UTILITZAT L'ALGORITME
+	DE FUSIO AMB MERGESORT PER CALCULAR LA SIMILARITY Y QUE NO FOS MASSA LENT

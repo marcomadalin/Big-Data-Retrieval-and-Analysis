@@ -1,0 +1,8 @@
+3, one
+4, five
+5, four
+5, six
+6, two
+8, three
+--------------------
+6 Words

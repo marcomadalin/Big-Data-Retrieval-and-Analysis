@@ -1,0 +1,6 @@
+DickensAChristmasCarol DickensGreatExpectations
+Similarity = 0.01715
+DickensAChristmasCarol DickensThePickwickPapers
+Similarity = 0.01280
+DickensGreatExpectations DickensThePickwickPapers
+Similarity = 0.03933
